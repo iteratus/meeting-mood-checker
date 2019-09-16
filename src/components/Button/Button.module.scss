@@ -1,0 +1,14 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none; // Removes blue shiny border on Chrome (default user-agent stylesheet)
+    text-decoration: none;
+  }
+}
