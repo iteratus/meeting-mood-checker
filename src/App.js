@@ -1,37 +1,33 @@
 import React from 'react';
-import classNames from 'classnames';
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Mood from './pages/Mood';
+import styles from "./App.module.scss";
 import { Icon } from '@iconify/react';
-import emojiHappy from '@iconify/icons-entypo/emoji-happy';
-import emojiNeutral from '@iconify/icons-entypo/emoji-neutral';
-import emojiSad from '@iconify/icons-entypo/emoji-sad';
-import checkCircle from '@iconify/icons-fa-solid/check-circle';
-
-import Button from "./components/Button";
-import styles from './App.module.scss';
+import statsAlt from '@iconify/icons-gridicons/stats-alt';
+import fileNew from '@iconify/icons-el/file-new';
 
 function App() {
   return (
-    <div className={styles.app}>
-      <div className={styles.column}>
-        <Button value="happy" ariaLabel="Happy" className={styles.button}>
-          <Icon icon={emojiHappy} className={classNames(styles.icon, styles.happy)} />
-          <Icon icon={checkCircle} className={classNames(styles.icon, styles.checkCircle)} />
-        </Button>
+    <Router>
+      <div className={styles.app}>
+        <nav className={styles.menu}>
+          <ul className={styles.menuList}>
+            <li><Link className={styles.link} to="/new"><Icon icon={fileNew} className={styles.icon} /></Link></li>
+            <li><Link className={styles.link} to="/stats"><Icon icon={statsAlt} className={styles.icon} /></Link></li>
+          </ul>
+        </nav>
+        <div className={styles.choose}>
+          <Route
+              path="/stats"
+              component={Mood}
+          />
+          <Route
+              path="/"
+              component={Mood}
+          />
+        </div>
       </div>
-      <div className={styles.column}>
-        <Button value="neutral" ariaLabel="Neutral" className={styles.button}>
-          <Icon icon={emojiNeutral} className={classNames(styles.icon, styles.neutral)} />
-          <Icon icon={checkCircle} className={classNames(styles.icon, styles.checkCircle)} />
-        </Button>
-      </div>
-      <div className={styles.column}>
-        <Button value="sad" ariaLabel="Sad" className={styles.button}>
-          <Icon icon={emojiSad} className={classNames(styles.icon, styles.sad)} />
-          <Icon icon={checkCircle} className={classNames(styles.icon, styles.checkCircle)} />
-        </Button>
-      </div>
-    </div>
+    </Router>
   );
 }
 
