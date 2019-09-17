@@ -1,5 +1,5 @@
 import React from 'react';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 import { Icon } from '@iconify/react';
 import emojiHappy from '@iconify/icons-entypo/emoji-happy';
@@ -15,20 +15,20 @@ function App() {
     <div className={styles.app}>
       <div className={styles.column}>
         <Button value="happy" ariaLabel="Happy" className={styles.button}>
-          <Icon icon={emojiHappy} className={classnames(styles.icon, styles.happy)} />
-          <Icon icon={checkCircle} className={classnames(styles.icon, styles.checkCircle)} />
+          <Icon icon={emojiHappy} className={classNames(styles.icon, styles.happy)} />
+          <Icon icon={checkCircle} className={classNames(styles.icon, styles.checkCircle)} />
         </Button>
       </div>
       <div className={styles.column}>
         <Button value="neutral" ariaLabel="Neutral" className={styles.button}>
-          <Icon icon={emojiNeutral} className={classnames(styles.icon, styles.neutral)} />
-          <Icon icon={checkCircle} className={classnames(styles.icon, styles.checkCircle)} />
+          <Icon icon={emojiNeutral} className={classNames(styles.icon, styles.neutral)} />
+          <Icon icon={checkCircle} className={classNames(styles.icon, styles.checkCircle)} />
         </Button>
       </div>
       <div className={styles.column}>
         <Button value="sad" ariaLabel="Sad" className={styles.button}>
-          <Icon icon={emojiSad} className={classnames(styles.icon, styles.sad)} />
-          <Icon icon={checkCircle} className={classnames(styles.icon, styles.checkCircle)} />
+          <Icon icon={emojiSad} className={classNames(styles.icon, styles.sad)} />
+          <Icon icon={checkCircle} className={classNames(styles.icon, styles.checkCircle)} />
         </Button>
       </div>
     </div>

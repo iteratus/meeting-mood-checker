@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import styles from './Button.module.scss';
 
 class Button extends Component {
@@ -61,7 +61,7 @@ class Button extends Component {
     const buttonAttributes = {
       ...other,
       children,
-      className: classnames(styles.button, className, {
+      className: classNames(styles.button, className, {
         [styles.active]: this.state.active
       }),
       onClick,
