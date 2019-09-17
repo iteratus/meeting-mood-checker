@@ -4,11 +4,16 @@
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
 
-  &:active,
-  &:focus,
-  &:hover {
-    outline: none; // Removes blue shiny border on Chrome (default user-agent stylesheet)
+  &:focus {
+    outline: none;
     text-decoration: none;
+  }
+
+  &.active {
+    cursor: pointer; // only something to be able to set the class
   }
 }

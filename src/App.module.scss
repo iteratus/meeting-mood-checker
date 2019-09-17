@@ -1,36 +1,64 @@
 .app {
-  text-align: center;
-}
-
-.appLogo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.appHeader {
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.appLink {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+$space: 3rem;
+$animationDuration: 1s;
 
 .column {
-  // something
+  flex: 1 0 auto;
+  margin: $space 0 $space $space;
+
+  &:last-child {
+    margin-right: $space;
+  }
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  color: #FFDD00;
+  border-radius: 50%;
+
+  &.neutral {
+    color: #EEEEEE;
+  }
+  &.sad {
+    color: #ed5740;
+  }
+  &.checkCircle {
+    color: #01BEFE;
+    opacity: 0;
+    position: absolute;
+    background: white;
+
+    [class*="active"] & {
+      animation: blendOut ease-out #{$animationDuration};
+    }
+  }
+}
+
+@keyframes blendOut {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
 }

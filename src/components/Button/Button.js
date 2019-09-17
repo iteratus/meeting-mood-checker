@@ -28,6 +28,25 @@ class Button extends Component {
     value: null,
   };
 
+  state = {
+    active: false
+  };
+
+  delayHandler = null;
+
+  handleClick = () => {
+    this.setState({active: true});
+
+    if (this.delayHandler) {
+      clearTimeout(this.delayHandler);
+      this.delayHandler = null;
+    }
+
+    this.delayHandler = setTimeout(() => {
+      this.setState({active: false});
+    }, 2000);
+  };
+
   render() {
     const {
       ariaLabel,
@@ -42,14 +61,16 @@ class Button extends Component {
     const buttonAttributes = {
       ...other,
       children,
-      className: classnames([styles.button, className]),
+      className: classnames(styles.button, className, {
+        [styles.active]: this.state.active
+      }),
       onClick,
       type,
       value,
     };
 
     // eslint-disable-next-line react/button-has-type
-    return <button {...buttonAttributes} aria-label={ariaLabel} />;
+    return <button {...buttonAttributes} aria-label={ariaLabel} onClick={this.handleClick} />;
   }
 }
 
