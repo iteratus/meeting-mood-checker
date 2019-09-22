@@ -4,25 +4,3 @@
   flex-direction: column;
   justify-content: center;
 }
-.menu {
-  flex-grow: 0;
-}
-.menuList {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  justify-content: right;
-}
-.link {
-  color: white;
-
-  .icon {
-    padding: 1rem;
-    width: 3rem;
-    height: 3rem;
-  }
-}
-.choose {
-   display: flex;
-  flex-grow: 1;
- }

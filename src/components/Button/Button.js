@@ -8,7 +8,7 @@ class Button extends Component {
     /** Label for screen reader only */
     ariaLabel: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node,
+      PropTypes.node
     ]),
     /** @ignore */
     className: PropTypes.string,
@@ -17,7 +17,7 @@ class Button extends Component {
     /** Type of the button */
     type: PropTypes.oneOf(['button', 'submit', 'reset']),
     /** Initial value of the button */
-    value: PropTypes.string,
+    value: PropTypes.string
   };
 
   static defaultProps = {
@@ -25,7 +25,7 @@ class Button extends Component {
     className: null,
     onClick: () => {},
     type: 'button',
-    value: null,
+    value: null
   };
 
   state = {
@@ -34,8 +34,8 @@ class Button extends Component {
 
   delayHandler = null;
 
-  handleClick = () => {
-    this.setState({active: true});
+  handleClick = event => {
+    this.setState({ active: true });
 
     if (this.delayHandler) {
       clearTimeout(this.delayHandler);
@@ -43,8 +43,10 @@ class Button extends Component {
     }
 
     this.delayHandler = setTimeout(() => {
-      this.setState({active: false});
-    }, 2000);
+      this.setState({ active: false });
+    }, 1000);
+
+    this.props.onClick(event);
   };
 
   render() {
@@ -66,11 +68,17 @@ class Button extends Component {
       }),
       onClick,
       type,
-      value,
+      value
     };
 
     // eslint-disable-next-line react/button-has-type
-    return <button {...buttonAttributes} aria-label={ariaLabel} onClick={this.handleClick} />;
+    return (
+      <button
+        {...buttonAttributes}
+        aria-label={ariaLabel}
+        onClick={this.handleClick}
+      />
+    );
   }
 }
 
