@@ -35,6 +35,8 @@ class Button extends Component {
   delayHandler = null;
 
   handleClick = event => {
+    const { onClick } = this.props;
+
     this.setState({ active: true });
 
     if (this.delayHandler) {
@@ -46,10 +48,12 @@ class Button extends Component {
       this.setState({ active: false });
     }, 1000);
 
-    this.props.onClick(event);
+    onClick(event);
   };
 
   render() {
+    const { active } = this.state;
+
     const {
       ariaLabel,
       children,
@@ -64,14 +68,13 @@ class Button extends Component {
       ...other,
       children,
       className: classNames(styles.button, className, {
-        [styles.active]: this.state.active
+        [styles.active]: active
       }),
       onClick,
       type,
       value
     };
 
-    // eslint-disable-next-line react/button-has-type
     return (
       <button
         {...buttonAttributes}

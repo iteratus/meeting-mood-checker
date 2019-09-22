@@ -6,14 +6,14 @@ import statsAlt from '@iconify/icons-gridicons/stats-alt';
 import outlineFiberNew from '@iconify/icons-ic/outline-fiber-new';
 import PropTypes from 'prop-types';
 import styles from './Header.module.scss';
-import { randomString } from '../../utils/randomString';
+import randomString from '../../utils/randomString';
 
 class Header extends Component {
   static propTypes = {
     match: PropTypes.shape({
       params: PropTypes.shape({
-        session: PropTypes.string,
-      }).isRequired,
+        session: PropTypes.string
+      }).isRequired
     }).isRequired
   };
 
@@ -32,7 +32,11 @@ class Header extends Component {
   };
 
   render() {
-    const { match: { params: { session } } } = this.props;
+    const {
+      match: {
+        params: { session }
+      }
+    } = this.props;
     const { nextSession } = this.state;
 
     return (

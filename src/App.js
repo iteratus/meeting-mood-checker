@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import styles from './App.module.scss';
 import Mood from './pages/Mood';
-import { randomString } from './utils/randomString';
+import randomString from './utils/randomString';
 
 function App() {
   return (

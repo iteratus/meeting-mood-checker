@@ -1,6 +1,10 @@
-export const randomString = (() => {
-  const gen = (min, max) =>
-    max++ && [...Array(max - min)].map((s, i) => String.fromCharCode(min + i));
+const randomString = (() => {
+  const gen = (min, max) => {
+    const usedMax = max + 1;
+    return [...Array(usedMax - min)].map((s, i) =>
+      String.fromCharCode(min + i)
+    );
+  };
 
   const sets = {
     numeric: gen(48, 57),
@@ -10,10 +14,14 @@ export const randomString = (() => {
   };
 
   function* iter(len, set) {
-    if (set.length < 1) {
-      set = Object.values(sets).flat();
+    let usedSet = set;
+
+    if (usedSet.length < 1) {
+      usedSet = Object.values(sets).flat();
     }
-    for (let i = 0; i < len; i++) yield set[(Math.random() * set.length) | 0];
+    for (let i = 0; i < len; i += 1) {
+      yield usedSet[Math.random() * usedSet.length || 0];
+    }
   }
 
   return Object.assign(
@@ -21,3 +29,5 @@ export const randomString = (() => {
     sets
   );
 })();
+
+export default randomString;
