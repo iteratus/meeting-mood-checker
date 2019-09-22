@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import styles from './App.module.scss';
 import Mood from './pages/Mood';
+import Stats from './pages/Stats';
 import randomString from './utils/randomString';
 
 function App() {
@@ -14,8 +15,8 @@ function App() {
     <Router>
       <div className={styles.app}>
         <Switch>
-          <Route path="/:session/stats" component={Mood} />
-          <Route path="/:session" component={Mood} />
+          <Route exact path="/:session/stats" component={Stats} />
+          <Route exact path="/:session" component={Mood} />
           <Redirect
             to={`/${randomString(
               6,

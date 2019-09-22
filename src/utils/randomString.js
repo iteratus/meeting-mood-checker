@@ -16,11 +16,12 @@ const randomString = (() => {
   function* iter(len, set) {
     let usedSet = set;
 
-    if (usedSet.length < 1) {
+    if (set.length < 1) {
       usedSet = Object.values(sets).flat();
     }
     for (let i = 0; i < len; i += 1) {
-      yield usedSet[Math.random() * usedSet.length || 0];
+      // eslint-disable-next-line no-bitwise
+      yield usedSet[(Math.random() * usedSet.length) | 0];
     }
   }
 

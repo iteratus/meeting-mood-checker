@@ -17,13 +17,17 @@ class Mood extends Component {
   static propTypes = {
     match: PropTypes.shape({
       params: PropTypes.shape({
-        session: PropTypes.string,
-      }).isRequired,
+        session: PropTypes.string
+      }).isRequired
     }).isRequired
   };
 
   handleClick = event => {
-    const { match: { params: { session } } } = this.props;
+    const {
+      match: {
+        params: { session }
+      }
+    } = this.props;
     const { value } = event.currentTarget;
 
     let allValues = null;
@@ -47,63 +51,54 @@ class Mood extends Component {
     localStorage.moodCheck = JSON.stringify(allValues);
   };
 
+  renderButton = button => {
+    return (
+      <div key={button.value} className={styles.column}>
+        <Button
+          value={button.value}
+          ariaLabel={button.label}
+          className={styles.button}
+          onClick={this.handleClick}
+        >
+          <Icon
+            icon={button.icon}
+            className={classNames(styles.icon, button.className)}
+          />
+          <Icon
+            icon={checkCircle}
+            className={classNames(styles.icon, styles.checkCircle)}
+          />
+        </Button>
+      </div>
+    );
+  };
+
   render() {
+    const buttons = [
+      {
+        value: 'happy',
+        label: 'Happy',
+        icon: emojiHappy,
+        className: styles.happy
+      },
+      {
+        value: 'neutral',
+        label: 'Neutral',
+        icon: emojiNeutral,
+        className: styles.neutral
+      },
+      {
+        value: 'sad',
+        label: 'Sad',
+        icon: emojiSad,
+        className: styles.sad
+      }
+    ];
+
     return (
       <>
         <Header />
-        <div className={styles.choose}>
-          <div className={styles.column}>
-            <Button
-              value="happy"
-              ariaLabel="Happy"
-              className={styles.button}
-              onClick={this.handleClick}
-            >
-              <Icon
-                icon={emojiHappy}
-                className={classNames(styles.icon, styles.happy)}
-              />
-              <Icon
-                icon={checkCircle}
-                className={classNames(styles.icon, styles.checkCircle)}
-              />
-            </Button>
-          </div>
-          <div className={styles.column}>
-            <Button
-              value="neutral"
-              ariaLabel="Neutral"
-              className={styles.button}
-              onClick={this.handleClick}
-            >
-              <Icon
-                icon={emojiNeutral}
-                className={classNames(styles.icon, styles.neutral)}
-              />
-              <Icon
-                icon={checkCircle}
-                className={classNames(styles.icon, styles.checkCircle)}
-              />
-            </Button>
-          </div>
-          <div className={styles.column}>
-            <Button
-              value="sad"
-              ariaLabel="Sad"
-              className={styles.button}
-              onClick={this.handleClick}
-            >
-              <Icon
-                icon={emojiSad}
-                className={classNames(styles.icon, styles.sad)}
-              />
-              <Icon
-                icon={checkCircle}
-                className={classNames(styles.icon, styles.checkCircle)}
-              />
-            </Button>
-          </div>
-        </div>
+        <div className={styles.choose}>{buttons.map(this.renderButton)}</div>
       </>
     );
   }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { Icon } from '@iconify/react';
 import statsAlt from '@iconify/icons-gridicons/stats-alt';
+import checkCircle from '@iconify/icons-fa-solid/check-circle';
 import outlineFiberNew from '@iconify/icons-ic/outline-fiber-new';
 import PropTypes from 'prop-types';
 import styles from './Header.module.scss';
@@ -34,10 +35,25 @@ class Header extends Component {
   render() {
     const {
       match: {
-        params: { session }
+        params: { session },
+        path
       }
     } = this.props;
     const { nextSession } = this.state;
+
+    let viewLink = {
+      to: `/${session}/stats`,
+      'aria-label': 'View stats',
+      icon: statsAlt
+    };
+
+    if (path.includes('/stats')) {
+      viewLink = {
+        to: `/${session}`,
+        ariaLabel: 'View chooser',
+        icon: checkCircle
+      };
+    }
 
     return (
       <nav className={styles.menu}>
@@ -47,13 +63,18 @@ class Header extends Component {
               className={styles.link}
               to={`/${nextSession}`}
               onClick={this.newSession}
+              aria-label="Create new mood check"
             >
               <Icon icon={outlineFiberNew} className={styles.icon} />
             </Link>
           </li>
           <li>
-            <Link className={styles.link} to={`/${session}/stats`}>
-              <Icon icon={statsAlt} className={styles.icon} />
+            <Link
+              className={styles.link}
+              to={viewLink.to}
+              aria-label={viewLink.ariaLabel}
+            >
+              <Icon icon={viewLink.icon} className={styles.icon} />
             </Link>
           </li>
         </ul>
