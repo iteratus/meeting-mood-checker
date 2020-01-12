@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import styles from './Button.module.scss';
 
 class Button extends Component {
+  delayHandler = null;
+
   static propTypes = {
     /** Label for screen reader only */
     ariaLabel: PropTypes.oneOfType([
@@ -31,8 +33,6 @@ class Button extends Component {
   state = {
     active: false
   };
-
-  delayHandler = null;
 
   handleClick = event => {
     const { onClick } = this.props;

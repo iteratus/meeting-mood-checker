@@ -2,15 +2,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-  background: transparent;
-  border: none;
   padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
 
   &:focus {
-    outline: none;
     text-decoration: none;
+    outline: none;
   }
 
   &.active {
