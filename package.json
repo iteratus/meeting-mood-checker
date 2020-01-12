@@ -40,6 +40,7 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "pretty-quick --staged",
+      "sass-lint-auto-fix",
       "eslint src/ --fix",
       "git add"
     ]
