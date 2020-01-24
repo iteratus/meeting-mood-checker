@@ -10,7 +10,7 @@
     "@iconify/icons-ic": "^1.0.2",
     "@iconify/react": "^1.1.1",
     "classnames": "^2.2.6",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
