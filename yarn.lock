@@ -1028,12 +1028,12 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.0.8.tgz#fbc3f7f2d12febaca8dbf74eb39dd4eea2091020"
   integrity sha512-r/VJI2a9mMDHszAj3FtdjwpvcFBiA/w9bbpkWSZ6NpFZ7HTdC5l+s4t5NQvBUNe2Cm7XWC5FUaT2K6bt++j+ng==
 
-"@iconify/react@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@iconify/react/-/react-1.1.1.tgz#38526508f722e0b617723d79209bb1e6d8c59c61"
-  integrity sha512-BRbPW/vkyWi6n2dHx4O8Cp0RKeI4KsxieLZ+UcyknCkk1IVxii5IassCIKHJ3jWB6s6uLAWq5EnHJniI7er9+w==
+"@iconify/react@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@iconify/react/-/react-1.1.2.tgz#6a87004f08c5d14e90193ccc1479db045df0f91f"
+  integrity sha512-52bUSY9CAgTAXkG1HVz1j7cRNepiiL9AWaIfiXLK8QNbwryBK3v9w95/cKXgTTPXKPcnxbuLYcAvkhll6R+g3w==
   dependencies:
-    react "^16.8.3"
+    react "^16.12.0"
 
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
@@ -9801,7 +9801,7 @@ react-vis@^1.11.7:
     prop-types "^15.5.8"
     react-motion "^0.5.2"
 
-react@^16.8.3, react@^16.9.0:
+react@^16.12.0, react@^16.9.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
