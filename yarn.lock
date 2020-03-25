@@ -1013,10 +1013,10 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-entypo/-/icons-entypo-1.0.3.tgz#f083ccdf086c1812244636a49104fb53b69f0e51"
   integrity sha512-wo0Z4Ru3aWwprv8a3F2etCpegV1DF7ff/w5eC4Uq3kmMNU5P8hPtID8SoDwu/f6QV80RpdLDMqPuf1lM3dtQ6Q==
 
-"@iconify/icons-fa-solid@^1.0.2":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-fa-solid/-/icons-fa-solid-1.0.6.tgz#18d81621746aee46451afcbf4eebaaf750a17964"
-  integrity sha512-0Jie6wiK20svJ/HbeH8tty4fodul6iy7RGebVebl0A616jvZ5DBnj9la3y3h4WCEtXIM4vQlQwivSP20PWl4Yg==
+"@iconify/icons-fa-solid@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-fa-solid/-/icons-fa-solid-1.0.8.tgz#3155871b2339df87b01053bb5b8e146e3f90defd"
+  integrity sha512-m+9QOR04X3G8pmUf2+MI8ZSqoewbrJSAw68ZMu/hYzMdEg/zZdCDkWd/Vm3iSg52gQY4yHT13HU5vKne0zOqAQ==
 
 "@iconify/icons-gridicons@^1.0.1":
   version "1.0.4"
