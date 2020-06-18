@@ -1670,10 +1670,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@iconify/icons-el@^1.0.1":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-el/-/icons-el-1.0.3.tgz#611ad9b352386c7ccbc4ad7f1874f4af93e93a38"
-  integrity sha512-gAqQzLo3OfD2EZ5LY3jCtM/Mi4qtl2zxVKC/4137zhVkMEly8/WygzslLcCRQ0lI7RVQlYxklSwgF4/9nCefBg==
+"@iconify/icons-el@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-el/-/icons-el-1.0.5.tgz#9d6af6a3eeca23768f607520ba86a6173be67448"
+  integrity sha512-xw/iLpiAM/5HQffGrjw++OsF3vYVRYX/6hC7DHw0IcFvbzHLvDpxqZw0ytgiqT3008cg51Gwb62dcquFFmBxvA==
 
 "@iconify/icons-entypo@^1.0.1":
   version "1.0.3"
