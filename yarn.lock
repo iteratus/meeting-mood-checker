@@ -1678,10 +1678,10 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-fa-solid/-/icons-fa-solid-1.0.10.tgz#b88387bb7cf1422198816efda2a191558685de2f"
   integrity sha512-brToelU5UL/9edUgdBcRPwaxGtU5CyyE8HaWXN9oToTaz3sC3eZETKuUrjN+TtuMBKVPFVNruiVX6ff4JNrYrw==
 
-"@iconify/icons-gridicons@^1.0.1":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-gridicons/-/icons-gridicons-1.0.4.tgz#2d26a211db5fc97b3997aaa2e3971e6f05c6c8f6"
-  integrity sha512-7Bln6JoX3mSbXyIK+ZoJzCJL75V5VKxSdwy6TgWqjhM72R0dAnOzmnXq9Rjp6vNVROXppXUPoaELKMwhfqlr8g==
+"@iconify/icons-gridicons@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-gridicons/-/icons-gridicons-1.0.6.tgz#4c6d246c2250509a16db055efce499598d51be8e"
+  integrity sha512-YTySGg1fE/mc5d89IT4GYf8k0ld3iglBN5+H+E2FnHKN7cZ9E2/cKS3eCnYt+T+LcC6IxBSG162E9T7CkPpu1Q==
 
 "@iconify/icons-ic@^1.0.13":
   version "1.0.13"
