@@ -5,7 +5,7 @@
   "dependencies": {
     "@iconify/icons-el": "^1.0.5",
     "@iconify/icons-entypo": "^1.0.1",
-    "@iconify/icons-fa-solid": "^1.0.10",
+    "@iconify/icons-fa-solid": "^1.0.12",
     "@iconify/icons-gridicons": "^1.0.6",
     "@iconify/icons-ic": "^1.0.14",
     "@iconify/react": "^1.1.3",
