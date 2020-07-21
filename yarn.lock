@@ -1668,10 +1668,10 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-el/-/icons-el-1.0.5.tgz#9d6af6a3eeca23768f607520ba86a6173be67448"
   integrity sha512-xw/iLpiAM/5HQffGrjw++OsF3vYVRYX/6hC7DHw0IcFvbzHLvDpxqZw0ytgiqT3008cg51Gwb62dcquFFmBxvA==
 
-"@iconify/icons-entypo@^1.0.1":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-entypo/-/icons-entypo-1.0.3.tgz#f083ccdf086c1812244636a49104fb53b69f0e51"
-  integrity sha512-wo0Z4Ru3aWwprv8a3F2etCpegV1DF7ff/w5eC4Uq3kmMNU5P8hPtID8SoDwu/f6QV80RpdLDMqPuf1lM3dtQ6Q==
+"@iconify/icons-entypo@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-entypo/-/icons-entypo-1.0.5.tgz#0bb236da8fa5979adbbf713761fea34742f2daf8"
+  integrity sha512-MU+WosE4wWPiUqL9rhFBKzuopQW0KieNdEIaVr/hRP2ApBzAGct1gQqeIW+oH0/TLo0unRErt4meYeyNsT6NOg==
 
 "@iconify/icons-fa-solid@^1.0.10":
   version "1.0.10"
