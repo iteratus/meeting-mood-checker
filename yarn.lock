@@ -1683,10 +1683,10 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-gridicons/-/icons-gridicons-1.0.6.tgz#4c6d246c2250509a16db055efce499598d51be8e"
   integrity sha512-YTySGg1fE/mc5d89IT4GYf8k0ld3iglBN5+H+E2FnHKN7cZ9E2/cKS3eCnYt+T+LcC6IxBSG162E9T7CkPpu1Q==
 
-"@iconify/icons-ic@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.0.14.tgz#c083fb5b593635af5fcbf667a237caa3d1ac2633"
-  integrity sha512-JL9ld5DTFOvXKvKBd1nRXR/yPfLPblPwxP3QtwyXedAVGuMNe3LON1ogwwIL1CZCGSbSAXdd0HWlOL7BoLFPaw==
+"@iconify/icons-ic@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.0.15.tgz#3b52dd282d46150f200de8b3b91313efc9780356"
+  integrity sha512-cQ7662o88Ny8/tLNIFvwCxVmNE+3cVuxIjh4lVKo1kRn4W1CPCQes+TLuflAwuEWhYVDRVV8FHcw4Am1WZwmUA==
 
 "@iconify/react@^1.1.3":
   version "1.1.3"
@@ -5099,7 +5099,7 @@ eslint-plugin-jsx-a11y@6.2.3:
     has "^1.0.3"
     jsx-ast-utils "^2.2.1"
 
-eslint-plugin-jsx-a11y@^6.3.1:
+eslint-plugin-jsx-a11y@^6.2.3:
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.3.1.tgz#99ef7e97f567cc6a5b8dd5ab95a94a67058a2660"
   integrity sha512-i1S+P+c3HOlBJzMFORRbC58tHa65Kbo8b52/TwCwSKLohwvpfT5rm2GjGWzOHTEuq4xxf2aRlHHTtmExDQOP+g==
