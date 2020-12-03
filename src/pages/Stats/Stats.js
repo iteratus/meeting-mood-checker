@@ -70,6 +70,7 @@ class Stats extends PureComponent {
     return (
       <>
         <Header />
+        Hier steht ein Text. Random BS.
         <div className={styles.stats}>
           <FlexibleXYPlot>
             <HorizontalGridLines style={{ stroke: '#444444' }} />
